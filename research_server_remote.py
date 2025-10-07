@@ -192,6 +192,8 @@ if __name__ == "__main__":
     # Initialize and run the server
     mcp.run(
         transport='sse',
-        host='0.0.0.0',
-        port=int(os.environ.get("PORT", 8001))
+        transport_options={
+            'host': '0.0.0.0',
+            'port': int(os.environ.get("PORT", 8001))
+        }
     )
